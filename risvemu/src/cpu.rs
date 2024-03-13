@@ -1489,9 +1489,9 @@ impl Cpu {
             0x73 => {
                 let addr = insn >> 20;
                 let mut funct3 = (insn >> 12) & 7;
-                let mut val = self.reg[rs1];
+                //let mut val = self.reg[rs1];
                 if (funct3 & 4) == 0 {
-                    val = rs1 as u64;
+                   // val = rs1 as u64;
                 }
                 funct3 = funct3 & 3;
 
